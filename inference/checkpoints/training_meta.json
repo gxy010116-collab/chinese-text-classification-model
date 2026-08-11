@@ -1,0 +1,22 @@
+{
+  "model_name": "hfl/chinese-roberta-wwm-ext",
+  "num_labels": 10,
+  "label_map": [
+    "财经",
+    "科技",
+    "教育",
+    "体育",
+    "娱乐",
+    "时政",
+    "社会",
+    "房产",
+    "健康",
+    "军事"
+  ],
+  "seed": 42,
+  "samples_per_class": 400,
+  "epochs": 3,
+  "learning_rate": 2e-05,
+  "max_length": 48,
+  "best_val_accuracy": 1.0
+}

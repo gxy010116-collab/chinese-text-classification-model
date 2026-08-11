@@ -13,7 +13,9 @@ from __future__ import annotations
 
 import logging
 import os
+import warnings
 from dataclasses import dataclass
+from pathlib import Path
 from typing import List, Optional, Tuple, Union
 
 import torch
@@ -102,6 +104,10 @@ class Prediction:
 class InferencePipeline:
     """End-to-end inference pipeline: tokenize → encode → predict → decode.
 
+    Automatically loads fine-tuned weights from checkpoints/ if available.
+    Falls back to the raw pre-trained backbone (with a warning about
+    untrained classification head) if no checkpoint is found.
+
     Usage::
 
         pipe = InferencePipeline(quantize=True)
@@ -117,12 +123,17 @@ class InferencePipeline:
         device: Optional[str] = None,
         quantize: bool = False,
         quantize_dtype: torch.dtype = torch.qint8,
+        checkpoint_dir: Optional[str] = None,
     ):
         self.model_name: str = model_name
         self.max_length: int = max_length
         self.device: torch.device = self._resolve_device(device)
         self.quantize: bool = quantize
         self.quantize_dtype: torch.dtype = quantize_dtype
+        self.checkpoint_dir: Path = (
+            Path(checkpoint_dir) if checkpoint_dir
+            else Path(__file__).resolve().parent / "checkpoints"
+        )
 
         self.tokenizer: Optional[BertTokenizer] = None
         self.model: Optional[TextClassifier] = None
@@ -143,22 +154,50 @@ class InferencePipeline:
     # ----- load -----
 
     def load(self) -> InferencePipeline:
-        """Load tokenizer and model, optionally applying INT8 dynamic quantization."""
+        """Load tokenizer and model.
+
+        Priority:
+        1. Local fine-tuned checkpoint (checkpoints/pytorch_model.bin)
+        2. Raw pre-trained backbone from HuggingFace (warning emitted)
+        """
         if self._loaded:
             return self
 
         log.info("Loading tokenizer: %s", self.model_name)
         self.tokenizer = BertTokenizer.from_pretrained(self.model_name)
 
-        log.info("Loading backbone: %s", self.model_name)
-        self.model = TextClassifier(
-            model_name=self.model_name, num_labels=NUM_LABELS
-        )
+        ckpt_path: Path = self.checkpoint_dir / "pytorch_model.bin"
+
+        if ckpt_path.exists():
+            log.info("Loading fine-tuned checkpoint: %s", ckpt_path)
+            self.model = TextClassifier(
+                model_name=self.model_name, num_labels=NUM_LABELS
+            )
+
+            # suppress the "missing keys" warning from BERT MLM head — expected
+            with warnings.catch_warnings():
+                warnings.filterwarnings("ignore", message=".*size mismatch.*")
+                state_dict: dict = torch.load(
+                    ckpt_path, map_location=self.device, weights_only=True
+                )
+            self.model.load_state_dict(state_dict, strict=True)
+            log.info("Checkpoint loaded successfully.")
+        else:
+            log.warning(
+                "No fine-tuned checkpoint found at %s. "
+                "The classification head is randomly initialized — "
+                "accuracy will be near random. Run 'python train.py' first.",
+                ckpt_path,
+            )
+            log.info("Loading raw backbone: %s", self.model_name)
+            self.model = TextClassifier(
+                model_name=self.model_name, num_labels=NUM_LABELS
+            )
 
         if self.quantize:
             log.info(
                 "Applying dynamic INT8 quantization "
-                "(Linear layers → qint8, embedding stays fp32)"
+                "(Linear layers -> qint8, embedding stays fp32)"
             )
             self.model = torch.quantization.quantize_dynamic(
                 self.model,
@@ -175,7 +214,7 @@ class InferencePipeline:
         byte_per_param: int = 1 if self.quantize else 4
         footprint_mb: float = (param_count * byte_per_param) / (1024 * 1024)
         log.info(
-            "Model loaded. params=%s device=%s quantized=%s footprint≈%.0fMB",
+            "Model loaded. params=%s device=%s quantized=%s footprint~%.0fMB",
             param_count,
             self.device,
             self.quantize,
@@ -278,11 +317,26 @@ class InferencePipeline:
 # ---------------------------------------------------------------------------
 
 def create_pipeline(
+    model_name: str = "hfl/chinese-roberta-wwm-ext",
     quantize: bool = False,
     device: Optional[str] = None,
+    checkpoint_dir: Optional[str] = None,
 ) -> InferencePipeline:
-    """Factory: create and load an InferencePipeline in one call."""
-    pipe = InferencePipeline(quantize=quantize, device=device)
+    """Factory: create and load an InferencePipeline in one call.
+
+    Args:
+        model_name: HuggingFace model ID. Use "hfl/chinese-macbert-base"
+                    for the alternative backbone.
+        quantize: Apply INT8 dynamic quantization.
+        device: Override auto-detected device (cpu, cuda, mps).
+        checkpoint_dir: Path to fine-tuned checkpoint directory.
+    """
+    pipe = InferencePipeline(
+        model_name=model_name,
+        quantize=quantize,
+        device=device,
+        checkpoint_dir=checkpoint_dir,
+    )
     pipe.load()
     return pipe
 

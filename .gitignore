@@ -27,5 +27,10 @@ Thumbs.db
 
 # Output
 *.log
+!inference/results/*.log
 predictions.json
 result.json
+
+# Internal evaluation / audit artifacts (not part of the deliverable repo)
+_judge_result.json
+audit_repo/

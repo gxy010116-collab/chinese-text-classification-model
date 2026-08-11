@@ -1,0 +1,1912 @@
+{
+  "model": "hfl/chinese-roberta-wwm-ext",
+  "device": "mps",
+  "quantized": false,
+  "total_samples": 211,
+  "inference_time_seconds": 1.924,
+  "throughput_samples_per_second": 109.7,
+  "metrics": {
+    "accuracy": 0.8483,
+    "precision_macro": 0.8653,
+    "recall_macro": 0.8487,
+    "f1_macro": 0.8493,
+    "precision_weighted": 0.865,
+    "recall_weighted": 0.8483,
+    "f1_weighted": 0.849
+  },
+  "per_class": [
+    {
+      "label_id": 0,
+      "label_name": "财经",
+      "total_true": 21,
+      "total_pred": 30,
+      "correct": 21,
+      "accuracy_per_class": 1.0
+    },
+    {
+      "label_id": 1,
+      "label_name": "科技",
+      "total_true": 22,
+      "total_pred": 21,
+      "correct": 17,
+      "accuracy_per_class": 0.7727
+    },
+    {
+      "label_id": 2,
+      "label_name": "教育",
+      "total_true": 21,
+      "total_pred": 22,
+      "correct": 19,
+      "accuracy_per_class": 0.9048
+    },
+    {
+      "label_id": 3,
+      "label_name": "体育",
+      "total_true": 21,
+      "total_pred": 22,
+      "correct": 21,
+      "accuracy_per_class": 1.0
+    },
+    {
+      "label_id": 4,
+      "label_name": "娱乐",
+      "total_true": 21,
+      "total_pred": 20,
+      "correct": 20,
+      "accuracy_per_class": 0.9524
+    },
+    {
+      "label_id": 5,
+      "label_name": "时政",
+      "total_true": 21,
+      "total_pred": 24,
+      "correct": 17,
+      "accuracy_per_class": 0.8095
+    },
+    {
+      "label_id": 6,
+      "label_name": "社会",
+      "total_true": 21,
+      "total_pred": 15,
+      "correct": 14,
+      "accuracy_per_class": 0.6667
+    },
+    {
+      "label_id": 7,
+      "label_name": "房产",
+      "total_true": 21,
+      "total_pred": 16,
+      "correct": 16,
+      "accuracy_per_class": 0.7619
+    },
+    {
+      "label_id": 8,
+      "label_name": "健康",
+      "total_true": 21,
+      "total_pred": 18,
+      "correct": 17,
+      "accuracy_per_class": 0.8095
+    },
+    {
+      "label_id": 9,
+      "label_name": "军事",
+      "total_true": 21,
+      "total_pred": 23,
+      "correct": 17,
+      "accuracy_per_class": 0.8095
+    }
+  ],
+  "confusion_matrix": [
+    [
+      21,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      17,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      5
+    ],
+    [
+      0,
+      2,
+      19,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      21,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      20,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      0,
+      0,
+      17,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      3,
+      1,
+      2,
+      1,
+      0,
+      0,
+      14,
+      0,
+      0,
+      0
+    ],
+    [
+      3,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      16,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      17,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      0,
+      0,
+      0,
+      17
+    ]
+  ],
+  "classification_report": "              precision    recall  f1-score   support\n\n          财经       0.70      1.00      0.82        21\n          科技       0.81      0.77      0.79        22\n          教育       0.86      0.90      0.88        21\n          体育       0.95      1.00      0.98        21\n          娱乐       1.00      0.95      0.98        21\n          时政       0.71      0.81      0.76        21\n          社会       0.93      0.67      0.78        21\n          房产       1.00      0.76      0.86        21\n          健康       0.94      0.81      0.87        21\n          军事       0.74      0.81      0.77        21\n\n    accuracy                           0.85       211\n   macro avg       0.87      0.85      0.85       211\nweighted avg       0.87      0.85      0.85       211\n",
+  "predictions": [
+    {
+      "text": "央行宣布下调存款准备金率0.5个百分点，释放长期资金约1万亿元",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "A股三大指数集体收涨，沪指重回3300点上方",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "人民币对美元汇率中间价上调200个基点",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "国家统计局发布上半年GDP数据，同比增长5.5%",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "多家银行下调存款利率，五年期定存降至2.5%以下",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "沪深两市成交额突破万亿元，北向资金净流入超50亿元",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "国际金价突破每盎司2100美元创历史新高",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "税务总局出台多项减税降费政策支持小微企业发展",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "新能源汽车板块异动拉升，多只个股封涨停板",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "中国平安发布年报，去年实现归母净利润856亿元",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "国家税务总局数据显示1至5月全国新增减税降费超7000亿元",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "央行开展2000亿元中期借贷便利操作 利率保持不变",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "前7个月全国固定资产投资同比增长3.4%",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "多家券商发布研报看好下半年消费板块投资机会",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "离岸人民币兑美元汇率跌破7.25关口 创近半年新低",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "央企重组整合提速 年内已有8家央企完成战略性重组",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "社融数据超预期 7月社会融资规模增量为1.2万亿元",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "多家科技公司密集发布回购计划 合计金额超过300亿元",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "国际货币基金组织上调中国经济增长预期至5.0%",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "首批消费基础设施公募REITs获批 涵盖百货和购物中心",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "银保监会发布商业银行资本管理办法征求意见稿",
+      "true_label_id": 0,
+      "true_label_name": "财经",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": true
+    },
+    {
+      "text": "苹果公司发布搭载M4芯片的新款MacBook Pro 起售价12999元",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": true
+    },
+    {
+      "text": "中国成功发射遥感四十二号01星 卫星进入预定轨道",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": false
+    },
+    {
+      "text": "特斯拉Optimus人形机器人已在工厂进行物料搬运测试",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": true
+    },
+    {
+      "text": "华为发布鸿蒙星河版操作系统 不再兼容安卓应用",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": true
+    },
+    {
+      "text": "全球首款3纳米手机芯片量产 晶体管数量突破200亿个",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": true
+    },
+    {
+      "text": "我国自主研发的量子计算机在特定问题计算速度超越经典超算",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": true
+    },
+    {
+      "text": "OpenAI发布GPT-5模型 支持多模态理解与实时语音交互",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": true
+    },
+    {
+      "text": "中科院团队实现室温超导重大突破 成果发表于Nature",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": true
+    },
+    {
+      "text": "中国5G基站总数超过400万个 覆盖所有地级市城区",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": true
+    },
+    {
+      "text": "微软宣布向中国AI初创企业投资10亿美元用于云计算合作",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": true
+    },
+    {
+      "text": "比亚迪发布第五代DM混动技术 综合续航突破2000公里",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": true
+    },
+    {
+      "text": "SpaceX星舰完成第四次轨道试飞 成功实现可控溅落",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": false
+    },
+    {
+      "text": "阿里达摩院开源大规模视觉语言模型 参数达千亿级别",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": true
+    },
+    {
+      "text": "中国北斗系统完成全球组网 定位精度达到厘米级",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": false
+    },
+    {
+      "text": "台积电宣布2纳米制程工艺将于2025年实现量产",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": true
+    },
+    {
+      "text": "英伟达发布新一代AI芯片Blackwell 推理性能提升30倍",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": true
+    },
+    {
+      "text": "我国首艘国产大型邮轮爱达魔都号完成首航",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": false
+    },
+    {
+      "text": "微信月活跃用户突破14亿 小程序日活跃用户超6亿",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": true
+    },
+    {
+      "text": "中国科学家实现二氧化碳人工合成淀粉技术新突破",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": true
+    },
+    {
+      "text": "英特尔宣布投资250亿美元在以色列建设新芯片工厂",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": true
+    },
+    {
+      "text": "滴滴自动驾驶完成新一轮3亿美元融资 估值超50亿美元",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": true
+    },
+    {
+      "text": "问界M9发布全新鸿蒙智行系统 实现城区NCA领航辅助",
+      "true_label_id": 1,
+      "true_label_name": "科技",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": false
+    },
+    {
+      "text": "教育部发布2025年全国硕士研究生招生考试公告 报名人数预计再创新高",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "多地推行教师轮岗制度 促进教育资源均衡配置",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "清华大学成立人工智能学院 姚期智院士出任首任院长",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": false
+    },
+    {
+      "text": "2025年高考全国统考时间确定 仍为6月7日至8日",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "教育部印发通知要求中小学每天安排30分钟大课间活动",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "最新全球大学排名发布 中国内地7所高校进入前100名",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "职业教育法修订草案三审 明确职校生与普通高校毕业生同等待遇",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "北京市教委宣布将英语口语纳入中考总分 权重逐年提高",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "中国学生首次在国际信息学奥林匹克竞赛中包揽全部金牌",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "教育部启动国家教育数字化战略行动 建设智慧教育平台",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "多地高校宣布2025年起全面取消清考制度",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "中国科学家首次获得诺贝尔物理学奖引发国内基础学科报考热潮",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "教育部等八部门联合印发中小学生研学旅行指导意见",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "2024年国家公派出国留学人员规模达到3.5万人创历史新高",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "多地幼儿园招生遇冷 出生人口下降效应传导至学前教育",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "国家中小学智慧教育平台上线新资源 覆盖全部学科所有学段",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "教育部部署开展校外培训监管数据稽核专项行动",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "国内第一所以碳中和为特色的大学在海南开工建设",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "多省份发布高考综合改革方案 采用3+1+2选科模式",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "国家自然科学基金委员会公布年度项目申请突破30万项",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": false
+    },
+    {
+      "text": "教育部将心理健康教育纳入中小学必修课程体系",
+      "true_label_id": 2,
+      "true_label_name": "教育",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": true
+    },
+    {
+      "text": "中国女篮在亚洲杯决赛中击败日本队 时隔12年重夺冠军",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "巴黎奥运会中国代表团获得40枚金牌创境外参赛最佳战绩",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "中国男足在世预赛中以3比1战胜泰国队 取得关键胜利",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "郑钦文法网夺冠成为中国首位大满贯单打冠军",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "苏炳添宣布正式退役 告别战将在钻石联赛上海站进行",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "CBA总决赛广东队4比2战胜辽宁队夺得队史第十二冠",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "中国游泳队在世锦赛上打破三项亚洲纪录并收获5枚奖牌",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "国际奥委会宣布2036年奥运会主办城市为多哈",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "孙颖莎在世界乒乓球锦标赛上包揽女单女双混双三枚金牌",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "中国电竞代表队在杭州亚运会上获得英雄联盟项目金牌",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "中网公开赛升级为WTA1000皇冠赛 总奖金突破1500万美元",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "朱婷宣布重返中国女排国家队备战洛杉矶奥运会周期",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "中超联赛新赛季开幕 16支球队将进行30轮主客场对决",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "中国滑雪运动员谷爱凌在自由式滑雪世界杯中再夺金牌",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "北京马拉松报名人数突破16万创国内路跑赛事新纪录",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "国际足联宣布2026年世界杯亚洲区名额增至8.5个",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "中国女子排球队在世界女排联赛总决赛中获得亚军",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "NBA中国赛确认回归 湖人和勇士将在上海深圳各进行一场比赛",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "中国体操队在世锦赛男子团体项目中成功卫冕",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "中国围棋选手柯洁在LG杯世界棋王赛中逆转夺冠",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "中超俱乐部获准使用归化球员 每队注册上限提升至3人",
+      "true_label_id": 3,
+      "true_label_name": "体育",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": true
+    },
+    {
+      "text": "电影春节档总票房突破90亿元 《哪吒之魔童闹海》领跑",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "热门电视剧《人世间2》开播收视率破3 创央视年度纪录",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "周杰伦世界巡回演唱会上海站门票8秒售罄 黄牛票炒至上万元",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "米哈游新作《绝区零》上线首月全球收入突破10亿美元",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "芒果TV和爱奇艺宣布合并 打造中国最大流媒体平台",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "综艺节目《歌手2025》首期网络播放量突破3亿次",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "中国影片《深海》获得奥斯卡最佳动画长片奖",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "抖音年度直播晚会星光盛典 在线观看人数突破1.2亿",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "B站跨年晚会口碑爆棚 豆瓣评分9.2分创历年新高",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "陈奕迅宣布2025年全球巡回演唱会计划 覆盖30个城市",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "国产动画《长安三万里》续集正式立项 预计2026年上映",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "张艺谋执导的新片《英雄联盟》公布首款预告片引发热议",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "腾讯音乐娱乐集团公布付费用户数突破1.5亿创历史新高",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "游戏版号发放提速 本批次共85款国产游戏获批",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "中国观众对好莱坞大片的审美疲劳趋势愈发明显",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "爆款短剧《我在古代当县令》全网播放量突破50亿次",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "爱奇艺自制剧《三体》系列获得艾美奖最佳国际剧集提名",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "网易云音乐上线AI作曲功能 用户可输入文字生成原创音乐",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "中国音乐人首次在科切拉音乐节主舞台完成压轴表演",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "大型沉浸式戏剧《不眠之夜》上海版累计演出突破2000场",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 4,
+      "pred_label_name": "娱乐",
+      "correct": true
+    },
+    {
+      "text": "网信办发布关于加强网络直播内容管理的指导意见",
+      "true_label_id": 4,
+      "true_label_name": "娱乐",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": false
+    },
+    {
+      "text": "国务院常务会议审议通过促进民营经济发展壮大的若干政策措施",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": true
+    },
+    {
+      "text": "国家主席习近平同俄罗斯总统普京举行视频会晤",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": true
+    },
+    {
+      "text": "全国两会代表委员热议加快发展新质生产力",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": true
+    },
+    {
+      "text": "外交部就美方新一轮对华加征关税提出严正交涉",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": true
+    },
+    {
+      "text": "中共中央政治局召开会议分析研究当前经济形势和经济工作",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": true
+    },
+    {
+      "text": "国防部回应南海问题：中国对南海诸岛及其附近海域拥有无可争辩的主权",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": false
+    },
+    {
+      "text": "国务院发布关于全面深化改革开放建设先行示范区的意见",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": true
+    },
+    {
+      "text": "全国人大常委会审议通过个人信息保护法修正案草案",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": true
+    },
+    {
+      "text": "中国与东盟宣布完成南海行为准则三读 进入最终磋商阶段",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": true
+    },
+    {
+      "text": "中央经济工作会议定调2025年宏观政策将更加积极有为",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": false
+    },
+    {
+      "text": "国家发改委发布新型城镇化建设五年行动计划",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": true
+    },
+    {
+      "text": "中国和巴西宣布建立全面战略伙伴关系并签署多项合作协议",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": true
+    },
+    {
+      "text": "生态环境部发布2030年碳达峰行动方案实施方案细则",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": true
+    },
+    {
+      "text": "国务院任免国家工作人员 涉及多个部委和直属机构",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": true
+    },
+    {
+      "text": "最高人民法院发布关于审理网络暴力案件的司法解释",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": true
+    },
+    {
+      "text": "国家主席习近平出席上海合作组织成员国元首理事会并发表重要讲话",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": true
+    },
+    {
+      "text": "中央纪委国家监委通报上半年全国纪检监察机关监督检查审查调查情况",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": true
+    },
+    {
+      "text": "国务院联防联控机制正式宣布新冠疫情不再构成国际关注的突发公共卫生事件",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 8,
+      "pred_label_name": "健康",
+      "correct": false
+    },
+    {
+      "text": "中国正式申请加入数字经济伙伴关系协定",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": true
+    },
+    {
+      "text": "全国政协召开双周协商座谈会围绕加快农业转移人口市民化建言献策",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": true
+    },
+    {
+      "text": "发改委和财政部联合发布超长期特别国债发行方案",
+      "true_label_id": 5,
+      "true_label_name": "时政",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": false
+    },
+    {
+      "text": "四川甘孜州泸定县发生6.8级地震 暂无人员伤亡报告",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 6,
+      "pred_label_name": "社会",
+      "correct": true
+    },
+    {
+      "text": "全国多地迎持续高温天气 多地气温突破40摄氏度",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 6,
+      "pred_label_name": "社会",
+      "correct": true
+    },
+    {
+      "text": "台风杜苏芮在福建沿海登陆 中心附近最大风力达16级",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 6,
+      "pred_label_name": "社会",
+      "correct": true
+    },
+    {
+      "text": "我国60岁以上老年人口突破3亿 占总人口比例超过21%",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 6,
+      "pred_label_name": "社会",
+      "correct": true
+    },
+    {
+      "text": "山西吕梁煤矿透水事故救援结束 被困矿工全部获救",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 6,
+      "pred_label_name": "社会",
+      "correct": true
+    },
+    {
+      "text": "京津冀地区遭遇特大暴雨 国家防总启动防汛四级应急响应",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 6,
+      "pred_label_name": "社会",
+      "correct": true
+    },
+    {
+      "text": "全国铁路暑运发送旅客突破9亿人次创历史同期新高",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": false
+    },
+    {
+      "text": "人社部2024届高校毕业生就业促进周在全国同步启动",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": false
+    },
+    {
+      "text": "中缅边境发生5.2级地震 云南多地有明显震感",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 6,
+      "pred_label_name": "社会",
+      "correct": true
+    },
+    {
+      "text": "2024年清明假期全国国内旅游出游3.2亿人次同比增长23%",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": false
+    },
+    {
+      "text": "新疆塔里木盆地新发现亿吨级油气田 能源安全再添保障",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 6,
+      "pred_label_name": "社会",
+      "correct": true
+    },
+    {
+      "text": "广州白云机场年旅客吞吐量突破8000万人次 蝉联全国第一",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": false
+    },
+    {
+      "text": "公安部部署开展夏季治安打击整治百日行动",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 6,
+      "pred_label_name": "社会",
+      "correct": true
+    },
+    {
+      "text": "长江流域进入主汛期 三峡水库开闸泄洪腾出防洪库容",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 6,
+      "pred_label_name": "社会",
+      "correct": true
+    },
+    {
+      "text": "全国多地优化生育政策 二孩三孩家庭可获购房补贴和育儿津贴",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": false
+    },
+    {
+      "text": "港珠澳大桥通车六周年 累计通行旅客超过6200万人次",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 6,
+      "pred_label_name": "社会",
+      "correct": true
+    },
+    {
+      "text": "甘肃张掖市发生5.5级地震 应急管理部门已派出工作组赶赴震区",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 6,
+      "pred_label_name": "社会",
+      "correct": true
+    },
+    {
+      "text": "2025年春运火车票开售 12306系统单日售票量突破2000万张",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 3,
+      "pred_label_name": "体育",
+      "correct": false
+    },
+    {
+      "text": "全国碳排放权交易市场运行三周年 累计成交额突破200亿元",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": false
+    },
+    {
+      "text": "云南大理洱海水质连续三年保持二类标准 生态修复成效显著",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 6,
+      "pred_label_name": "社会",
+      "correct": true
+    },
+    {
+      "text": "民政部公布2024年全国结婚登记数据 创近四十年来新低",
+      "true_label_id": 6,
+      "true_label_name": "社会",
+      "pred_label_id": 6,
+      "pred_label_name": "社会",
+      "correct": true
+    },
+    {
+      "text": "北上广深四个一线城市全部官宣执行认房不认贷政策",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 7,
+      "pred_label_name": "房产",
+      "correct": true
+    },
+    {
+      "text": "杭州全面取消住房限购政策 二手房挂牌量单日激增5000套",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 7,
+      "pred_label_name": "房产",
+      "correct": true
+    },
+    {
+      "text": "多家银行下调存量房贷利率 首套房贷利率最低降至3.5%",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 7,
+      "pred_label_name": "房产",
+      "correct": true
+    },
+    {
+      "text": "恒大集团正式进入破产清算程序 涉及债务规模超2万亿",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": false
+    },
+    {
+      "text": "北京二环内一处四合院以2.5亿元成交刷新年度纪录",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 7,
+      "pred_label_name": "房产",
+      "correct": true
+    },
+    {
+      "text": "住建部要求各地加快保障性租赁住房建设进度",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 7,
+      "pred_label_name": "房产",
+      "correct": true
+    },
+    {
+      "text": "全国商品房待售面积连续六个月攀升 去化周期创新高",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 7,
+      "pred_label_name": "房产",
+      "correct": true
+    },
+    {
+      "text": "万科召开业绩发布会称将于年内偿还所有到期境外债务",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": false
+    },
+    {
+      "text": "深圳市发布住房发展规划 提出十四五期间建设筹集89万套住房",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 7,
+      "pred_label_name": "房产",
+      "correct": true
+    },
+    {
+      "text": "二手房指导价制度取消后 多个城市二手房成交量大幅反弹",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 7,
+      "pred_label_name": "房产",
+      "correct": true
+    },
+    {
+      "text": "碧桂园宣布对11只境内公司债进行整体展期3年",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": false
+    },
+    {
+      "text": "上海市黄浦区核心地段一宗商住用地以310亿元成交",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 7,
+      "pred_label_name": "房产",
+      "correct": true
+    },
+    {
+      "text": "多个城市推出共有产权住房 面向新市民和青年人群体",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 7,
+      "pred_label_name": "房产",
+      "correct": true
+    },
+    {
+      "text": "前11个月房地产开发投资同比下降9.4% 降幅持续扩大",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 7,
+      "pred_label_name": "房产",
+      "correct": true
+    },
+    {
+      "text": "广州放宽落户条件 在黄埔和南沙区购房即可申请落户",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 2,
+      "pred_label_name": "教育",
+      "correct": false
+    },
+    {
+      "text": "住房和城乡建设部启动全国房屋安全排查专项整治",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 6,
+      "pred_label_name": "社会",
+      "correct": false
+    },
+    {
+      "text": "天津出台公积金新政策 购买首套房最高可贷100万元",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 7,
+      "pred_label_name": "房产",
+      "correct": true
+    },
+    {
+      "text": "全国百城新建商品住宅成交均价环比微涨0.3%",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 7,
+      "pred_label_name": "房产",
+      "correct": true
+    },
+    {
+      "text": "多地推进现房销售试点改革 期房预售制度或迎来重大变革",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 7,
+      "pred_label_name": "房产",
+      "correct": true
+    },
+    {
+      "text": "万达集团出售旗下多个万达广场项目用于偿还到期债务",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 7,
+      "pred_label_name": "房产",
+      "correct": true
+    },
+    {
+      "text": "北京城市副中心行政办公区二期工程全面竣工交付使用",
+      "true_label_id": 7,
+      "true_label_name": "房产",
+      "pred_label_id": 7,
+      "pred_label_name": "房产",
+      "correct": true
+    },
+    {
+      "text": "国家药监局附条件批准首款国产mRNA新冠疫苗上市",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 8,
+      "pred_label_name": "健康",
+      "correct": true
+    },
+    {
+      "text": "世界卫生组织宣布猴痘疫情不再构成国际关注的突发公共卫生事件",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 8,
+      "pred_label_name": "健康",
+      "correct": true
+    },
+    {
+      "text": "最新研究显示每天步行8000步可显著降低心血管疾病风险",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 8,
+      "pred_label_name": "健康",
+      "correct": true
+    },
+    {
+      "text": "国家医保局公布新版医保目录 新增91种药品平均降价62%",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 8,
+      "pred_label_name": "健康",
+      "correct": true
+    },
+    {
+      "text": "中国阿尔茨海默症患者已超千万 早筛早诊成为防控关键",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 8,
+      "pred_label_name": "健康",
+      "correct": true
+    },
+    {
+      "text": "国家卫健委印发2025版中国居民膳食指南 新增老年人专属建议",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 8,
+      "pred_label_name": "健康",
+      "correct": true
+    },
+    {
+      "text": "CAR-T细胞疗法在华获批第三个适应症 用于治疗多发性骨髓瘤",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 8,
+      "pred_label_name": "健康",
+      "correct": true
+    },
+    {
+      "text": "中国科学家成功完成全球首例猪肾脏人体异种移植手术",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 8,
+      "pred_label_name": "健康",
+      "correct": true
+    },
+    {
+      "text": "中医针灸被列入联合国教科文组织人类非物质文化遗产代表作名录周年纪念",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": false
+    },
+    {
+      "text": "流感季节来临 多地疾控中心呼吁市民积极接种流感疫苗",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 8,
+      "pred_label_name": "健康",
+      "correct": true
+    },
+    {
+      "text": "我国儿童青少年近视率超过50% 教育部联合卫健委出台防控方案",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 8,
+      "pred_label_name": "健康",
+      "correct": true
+    },
+    {
+      "text": "新型长效胰岛素获批上市 糖尿病患者每周仅需注射一次",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 8,
+      "pred_label_name": "健康",
+      "correct": true
+    },
+    {
+      "text": "精神卫生法修订草案公开征求意见 拟将心理咨询纳入医保",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 8,
+      "pred_label_name": "健康",
+      "correct": true
+    },
+    {
+      "text": "全球首个肺癌早期筛查人工智能系统在中国获批医疗器械注册证",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 8,
+      "pred_label_name": "健康",
+      "correct": true
+    },
+    {
+      "text": "中医药振兴发展重大工程实施方案发布 提出20项重点任务",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": false
+    },
+    {
+      "text": "我国人均预期寿命达到79.2岁 主要健康指标居中高收入国家前列",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 8,
+      "pred_label_name": "健康",
+      "correct": true
+    },
+    {
+      "text": "北京协和医院完成亚洲首例人工心脏植入联合肾移植手术",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 8,
+      "pred_label_name": "健康",
+      "correct": true
+    },
+    {
+      "text": "国家市场监管总局发布保健食品标注警示用语指南修订版",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 0,
+      "pred_label_name": "财经",
+      "correct": false
+    },
+    {
+      "text": "HPV疫苗接种扩龄至45岁 多地启动适龄女性免费接种计划",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 8,
+      "pred_label_name": "健康",
+      "correct": true
+    },
+    {
+      "text": "国家卫健委公布第四批国家区域医疗中心建设项目名单",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 8,
+      "pred_label_name": "健康",
+      "correct": true
+    },
+    {
+      "text": "中国自主研发的脑机接口芯片获批进入临床试验阶段",
+      "true_label_id": 8,
+      "true_label_name": "健康",
+      "pred_label_id": 1,
+      "pred_label_name": "科技",
+      "correct": false
+    },
+    {
+      "text": "中国海军新型万吨级驱逐舰正式命名为遵义舰并入列服役",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": true
+    },
+    {
+      "text": "中俄两军在日本海相关空域组织实施联合空中战略巡航",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": true
+    },
+    {
+      "text": "歼-35隐身舰载战斗机完成首次电磁弹射起飞测试",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": true
+    },
+    {
+      "text": "中国成功进行陆基中段反导拦截技术试验 达到预期目的",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": true
+    },
+    {
+      "text": "国防部发言人回应域外国家军舰过航台湾海峡：全程跟踪警戒",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": true
+    },
+    {
+      "text": "中国第三艘航空母舰福建舰顺利完成首次海试任务",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": true
+    },
+    {
+      "text": "海军第47批护航编队从青岛起航 赴亚丁湾索马里海域执行护航任务",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": true
+    },
+    {
+      "text": "中国宣布成功试射新一代洲际弹道导弹 命中太平洋预定靶区",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": true
+    },
+    {
+      "text": "中国在联合国大会裁军与国际安全委员会阐述核裁军立场",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": false
+    },
+    {
+      "text": "中国空军八一飞行表演队在马来西亚兰卡威航展上精彩亮相",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": true
+    },
+    {
+      "text": "新型高空长航时无人机在西北某地完成72小时不间断飞行测试",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": true
+    },
+    {
+      "text": "中国维和部队赴南苏丹执行第11次轮换部署任务",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": true
+    },
+    {
+      "text": "中国发布关于中美两军关系的白皮书 强调对话不对抗",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": false
+    },
+    {
+      "text": "国产新一代重型武装直升机完成高海拔地区实战化训练",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": true
+    },
+    {
+      "text": "海军和平方舟医院船赴印度洋五国执行医疗援助任务",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": true
+    },
+    {
+      "text": "中国科研团队研发出新型定向能武器系统达到国际先进水平",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": true
+    },
+    {
+      "text": "火箭军某旅在复杂电磁环境下成功组织多波次火力突击演练",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": true
+    },
+    {
+      "text": "中国向巴基斯坦交付首批歼-10CE战斗机完成联合军演",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": true
+    },
+    {
+      "text": "中国国防部发表关于南海军事部署的声明",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": false
+    },
+    {
+      "text": "中国陆军合成旅在高原寒区完成实弹攻击演练 检验新装备实战能力",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 9,
+      "pred_label_name": "军事",
+      "correct": true
+    },
+    {
+      "text": "中国军事代表团访问非洲三国 就军事合作达成多项共识",
+      "true_label_id": 9,
+      "true_label_name": "军事",
+      "pred_label_id": 5,
+      "pred_label_name": "时政",
+      "correct": false
+    }
+  ]
+}

@@ -267,6 +267,12 @@ def main() -> None:
         default=DATA_PATH,
         help="Path to sample data JSON. Default: sample_data.json",
     )
+    parser.add_argument(
+        "--checkpoint-dir",
+        type=Path,
+        default=None,
+        help="Path to fine-tuned checkpoint directory. Default: inference/checkpoints/",
+    )
     args = parser.parse_args()
 
     logging.basicConfig(
@@ -288,6 +294,7 @@ def main() -> None:
     pipe: InferencePipeline = InferencePipeline(
         quantize=args.quantize,
         device=args.device,
+        checkpoint_dir=str(args.checkpoint_dir) if args.checkpoint_dir else None,
     )
     pipe.load()
 

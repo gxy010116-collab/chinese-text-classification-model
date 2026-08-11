@@ -1,0 +1,91 @@
+INFO: Loading sample data from: /Users/xyguo/Desktop/accio_work_combine_new/team_benchmark_eval/cases/case-022/output/L3/team_legacy_ultra/inference/sample_data.json
+INFO: Sample distribution:
+INFO:   0 (财经): 21
+INFO:   1 (科技): 22
+INFO:   2 (教育): 21
+INFO:   3 (体育): 21
+INFO:   4 (娱乐): 21
+INFO:   5 (时政): 21
+INFO:   6 (社会): 21
+INFO:   7 (房产): 21
+INFO:   8 (健康): 21
+INFO:   9 (军事): 21
+INFO:   TOTAL: 211
+INFO: Loading tokenizer: hfl/chinese-roberta-wwm-ext
+INFO: Loading fine-tuned checkpoint: /Users/xyguo/Desktop/accio_work_combine_new/team_benchmark_eval/cases/case-022/output/L3/team_legacy_ultra/inference/checkpoints/pytorch_model.bin
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 63194.01it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: hfl/chinese-roberta-wwm-ext
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+INFO: Checkpoint loaded successfully.
+INFO: Model loaded. params=102275338 device=mps quantized=False footprint~390MB
+INFO: Running inference on 211 samples...
+INFO: Detailed results saved to: /Users/xyguo/Desktop/accio_work_combine_new/team_benchmark_eval/cases/case-022/output/L3/team_legacy_ultra/inference/results/eval_results.json
+
+================================================================
+  中文文本分类评测结果
+================================================================
+  Model:      hfl/chinese-roberta-wwm-ext
+  Device:     mps
+  Quantized:  False
+  Samples:    211
+  Time:       0.46s
+  Throughput: 458.9 samples/s
+================================================================
+
+--- Overall Metrics ---
+  Accuracy:          0.8483
+  Precision (macro): 0.8653
+  Recall (macro):    0.8487
+  F1 (macro):        0.8493
+  Precision (weighted): 0.8650
+  Recall (weighted):    0.8483
+  F1 (weighted):        0.8490
+
+--- Per-Class Accuracy ---
+  ID  Label  Total  Correct  Acc     
+  -----------------------------------
+  0   财经     21     21       1.0000  
+  1   科技     22     17       0.7727  
+  2   教育     21     19       0.9048  
+  3   体育     21     21       1.0000  
+  4   娱乐     21     20       0.9524  
+  5   时政     21     17       0.8095  
+  6   社会     21     14       0.6667  
+  7   房产     21     16       0.7619  
+  8   健康     21     17       0.8095  
+  9   军事     21     17       0.8095  
+
+--- Classification Report ---
+              precision    recall  f1-score   support
+
+          财经       0.70      1.00      0.82        21
+          科技       0.81      0.77      0.79        22
+          教育       0.86      0.90      0.88        21
+          体育       0.95      1.00      0.98        21
+          娱乐       1.00      0.95      0.98        21
+          时政       0.71      0.81      0.76        21
+          社会       0.93      0.67      0.78        21
+          房产       1.00      0.76      0.86        21
+          健康       0.94      0.81      0.87        21
+          军事       0.74      0.81      0.77        21
+
+    accuracy                           0.85       211
+   macro avg       0.87      0.85      0.85       211
+weighted avg       0.87      0.85      0.85       211
+
+================================================================
+  评测完成。
+================================================================
+
