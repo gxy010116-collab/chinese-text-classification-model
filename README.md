@@ -115,7 +115,7 @@ python eval.py --device cpu        # 指定设备
 | F1 (weighted) | 84.90% |
 
 - 训练耗时 6.9 分钟（14 核 Apple Silicon CPU，`--max-length 48`，batch_size=8），验证集 best val_acc 1.0000
-- 推理吞吐约 110 ~ 460 样本/秒（MPS，FP32，batch=32）——吞吐为环境性指标，随机器负载波动（随包 `results/eval_results.json` 记录 109.7、对应运行日志记录 458.9，均为同口径 `predict_labels` 耗时）；不影响分类数字；无 Apple GPU 的机器回退 CPU，吞吐更低但分类结果一致
+- 推理吞吐约 110 ~ 460 样本/秒（MPS，FP32，batch=32）——吞吐为环境性指标，随机器负载波动：随包 `results/eval_results.json` 是其写入时那次运行的记录（1.924s，109.7 样本/秒），`results/eval_run.log` 则是另一次独立运行的记录（0.46s，458.9 样本/秒），二者均为 `predict_labels(batch=32)` 同口径计时且分类指标完全一致，仅耗时字段随运行时机不同；无 Apple GPU 的机器回退 CPU，吞吐更低但分类结果一致
 - 允许浮动范围：同版本依赖 + 固定 seed=42 下数字完全可复现（±0）；若 torch 版本/硬件不同，个别样本 argmax 可能浮动，Accuracy 在 ±1pp（约 ±2 条）内均属正常。出现差异时优先核对 `requirements.txt` 版本与 `checkpoints/training_meta.json` 超参
 
 > **复现注意**：评测数据 `sample_data.json` 包含 211 条固定样本（科技类 22 条，其余每类 21 条）。本仓库不引用 THUCNews 等公开基准数字作为预期值，上表实测值即唯一对齐标准。数字回溯链：`inference/results/train_run.log` → `checkpoints/training_meta.json` → `inference/results/eval_results.json` → `inference/results/eval_run.log`。错例分析详见 [reports/evaluation_report.md](reports/evaluation_report.md)。

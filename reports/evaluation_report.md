@@ -46,7 +46,7 @@
 | Precision (weighted) | 0.8650 |
 | Recall (weighted) | 0.8483 |
 | F1 (weighted) | 0.8490 |
-| 推理耗时 | 0.46 ~ 1.92s / 211 条（约 110 ~ 460 样本/秒，MPS，FP32，batch=32）。吞吐随机器负载波动：`results/eval_results.json` 记录 1.924s（109.7 样本/秒），对应运行日志 `results/eval_run.log` 记录 0.46s（458.9 样本/秒），同为 `predict_labels(batch=32)` 口径，不影响分类数字 |
+| 推理耗时 | 0.46 ~ 1.92s / 211 条（约 110 ~ 460 样本/秒，MPS，FP32，batch=32）。吞吐为环境性指标，随机器负载波动：本表上行 0.503s（419.9 样本/秒）为报告基准运行；随包 `results/eval_results.json` 是其写入时那次运行的记录（1.924s，109.7 样本/秒）；`results/eval_run.log` 为另一次独立运行的记录（0.46s，458.9 样本/秒）。三次运行同为 `predict_labels(batch=32)` 口径，分类指标完全一致，仅计时字段不同 |
 
 ### 2.2 Per-class 指标
 
