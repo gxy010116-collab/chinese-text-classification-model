@@ -147,7 +147,7 @@ bash run.sh --skip-train
 # 等效分步命令
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-python train.py --epochs 3 --samples 400 --seed 42 --max-length 48
+python train.py --epochs 3 --samples 400 --seed 42 --max-length 48 --device cpu
 python eval.py --output results/eval_results.json
 ```
 

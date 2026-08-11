@@ -55,7 +55,7 @@ pip install -r requirements.txt
 
 # 3. 训练模型（生成训练数据 + fine-tune）
 #    run.sh 使用 --max-length 48（评测/训练文本均短于 48 token）；多核 CPU 实测约 7 分钟
-python train.py --epochs 3 --samples 400 --seed 42 --max-length 48
+python train.py --epochs 3 --samples 400 --seed 42 --max-length 48 --device cpu
 
 # 4. 评测
 python eval.py

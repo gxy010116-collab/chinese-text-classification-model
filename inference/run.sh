@@ -70,7 +70,9 @@ if [ "$SKIP_TRAIN" = false ] && [ ! -f "$CHECKPOINT" ]; then
     step "  (This will generate ~4000 training samples and fine-tune for 3 epochs."
     step "   On CPU this may take 30-60 minutes. Use --skip-train to skip.)"
     echo ""
-    "$PYTHON" train.py --epochs 3 --samples 400 --seed 42 --max-length 48 2>&1 | tee results/train_run.log
+    # Training is pinned to CPU: GPU/MPS training is non-deterministic across
+    # backends and would break the documented seed=42 reproducibility contract.
+    "$PYTHON" train.py --epochs 3 --samples 400 --seed 42 --max-length 48 --device cpu 2>&1 | tee results/train_run.log
     ok "Training complete. Checkpoint saved to checkpoints/"
 elif [ "$SKIP_TRAIN" = true ]; then
     step "Skipping training (--skip-train). Using existing checkpoint if available."

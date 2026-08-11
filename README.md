@@ -83,7 +83,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 # 3. 训练（seed=42 确定性生成训练数据 + fine-tune，生成 checkpoints/）
-python train.py --epochs 3 --samples 400 --seed 42 --max-length 48
+python train.py --epochs 3 --samples 400 --seed 42 --max-length 48 --device cpu  # 训练必须 CPU：GPU/MPS 训练非确定性，会破坏 seed=42 复现
 
 # 4. 评测
 python eval.py --output results/eval_results.json
